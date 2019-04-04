@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class grabItem : MonoBehaviour
 {
+    public GameObject box;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,7 @@ public class grabItem : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
+            Destroy(box);
             Destroy(gameObject);
         }
     }

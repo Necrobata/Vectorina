@@ -17,6 +17,7 @@ public class SpikesNMonsters : MonoBehaviour
     void Awake()
     {
         movementScript = FindObjectOfType<movementScript>();
+
     }
 
 

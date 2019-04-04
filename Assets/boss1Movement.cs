@@ -7,6 +7,18 @@ public class boss1Movement : MonoBehaviour
     public Rigidbody2D rb;
     public float movementSpeed = 0.000005f;
     public bool triggered = false;
+    private AudioSource source;
+    public AudioClip shootSound;
+
+
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+
+    }
+
+
+
 
 
     // Start is called before the first frame update
@@ -25,6 +37,7 @@ public class boss1Movement : MonoBehaviour
         {
             //gameObject.transform.position.x += forceIncrement;
             rb.AddForce(Vector3.right * movementSpeed);
+            source.PlayOneShot(shootSound, 1f);
         }
 
         //Debug.Log(triggered);
